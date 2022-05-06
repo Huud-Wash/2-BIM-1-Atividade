@@ -1,0 +1,88 @@
+  return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: NetworkImage(
+                  'https://pbs.twimg.com/media/ELdUgpqXUAIjd82.jpg'),
+              colorFilter: ColorFilter.mode(
+                Colors.white.withOpacity(0.8),
+                BlendMode.modulate,
+              )),
+          borderRadius: BorderRadius.circular(40)),
+      width: 500,
+      height: 500,
+      padding: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(10.0),
+      child: Column(children: [
+        Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+          Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              color: Colors.purple,
+              borderRadius: BorderRadius.circular(40),
+            ),
+            child: const Icon(
+              Icons.bookmark_border,
+              color: Colors.white,
+              size: 25.0,
+            ),
+          )
+        ]),
+        const SizedBox(height: 140),
+        Row(children: [
+          const SizedBox(width: 40),
+          const Text(
+              'Social Security Is \nRethinking How It Runs \nCustomer Service \nAfter Covid',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              )),
+        ]),
+        const SizedBox(
+          height: 40,
+        ),
+        Row(children: [
+          const SizedBox(width: 20),
+          const Icon(
+            Icons.circle,
+            color: Colors.purple,
+            size: 30.0,
+          ),
+          Column(children: const [
+            Text('USA', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text('TODAY', style: TextStyle(fontWeight: FontWeight.bold)),
+          ]),
+          const SizedBox(width: 310),
+          const Text('4h ago',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+              )),
+        ]),
+        const SizedBox(height: 20),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: const [
+          Text('Mary Wilton',
+              style: TextStyle(
+                fontSize: 15,
+              )),
+          Icon(
+            Icons.circle,
+            color: Colors.white,
+            size: 3.0,
+          ),
+          Text('5 min Reads',
+              style: TextStyle(
+                fontSize: 15,
+              )),
+          Icon(
+            Icons.circle,
+            color: Colors.white,
+            size: 3.0,
+          ),
+          Text('54 Upvote',
+              style: TextStyle(
+                fontSize: 15,
+              ))
+        ])
+      ]));
+}
